@@ -1,0 +1,1 @@
+export const SET_DEFAULT_SPOTS = 'SET_DEFAULT_SPOTS'
