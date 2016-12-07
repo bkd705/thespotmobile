@@ -15,7 +15,11 @@ class SpotsListView extends React.Component {
 
   componentWillMount() {
     if(this.props.spots.length === 0) {
-      this.props.getSpots()
+      this.props.getSpots().then(res => {
+        console.log('Success')
+      }).catch(err => {
+        console.log('Error', err)
+      })
     }
     if(this.state.spots.length === 0) {
       this.setState({
