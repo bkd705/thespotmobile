@@ -17,7 +17,6 @@ export function getSpots() {
   return dispatch => {
     return axios.get(`${host}/spots/all`).then(res => {
       console.log('Spots Got')
-      console.log(res)
       return dispatch(setDefaultSpots(res.data.spots))
     }).catch(err => {
       console.log(err)

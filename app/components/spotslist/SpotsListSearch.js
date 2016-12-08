@@ -16,11 +16,10 @@ class SpotsListSearch extends React.Component {
       return <li key={key} onClick={() => this.addTagFilter(tag)}>+{tag}</li>
     })
     return(
-      <Header searchBar>
-        <InputGroup>
+      <Header searchBar style={{backgroundColor: 'white' }}>
+        <InputGroup style={{borderWidth: 0, shadowOpacity: 0}}>
             <Icon name="ios-search" />
-            <Input onChangeText={(query) => this.doSearch(query)} placeholder="Search" />
-            <Icon name="ios-map" />
+            <Input style={{borderWidth: 0, shadowOpacity: 0}} onChangeText={(query) => this.doSearch(query)} placeholder="Search by Feature or Name" />
         </InputGroup>
         <Button transparent>
             Search

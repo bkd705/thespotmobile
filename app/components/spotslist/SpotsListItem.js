@@ -11,12 +11,9 @@ const SpotsListItem = ({ spot }) => {
     return <Text style={{textAlign: 'center'}}key={key}>{ft}</Text>
   })
   const imgSrc = (`${host}/assets/img/${spot.name.toLowerCase().split(' ').join('').replace(/[^\w\s]/gi, '')}.jpg`)
-  const handlePress = () => {
-    console.log('Pressed')
-  }
   return(
     <Card>
-      <CardItem onPress={handlePress}>
+      <CardItem>
         <Text>{spot.name}</Text>
         <Text note>{spot.address}</Text>
       </CardItem>
